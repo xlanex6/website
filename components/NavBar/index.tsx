@@ -1,5 +1,5 @@
 import Link from "next/link"
-import GitHubButton from 'react-github-btn'
+import { AiFillGithub } from 'react-icons/ai';
 import { Container } from "../Container";
 
 const pages = [
@@ -41,6 +41,10 @@ export function NavBar() {
                 </Link>
               ))
             }
+
+            <a href="https://github.com/nearform/lyra" target="_blank" className="hover:text-slate-300">
+              <AiFillGithub className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </Container>
