@@ -42,7 +42,7 @@ export function NavBar() {
               ))
             }
 
-            <a href="https://github.com/nearform/lyra" target="_blank" className="hover:text-slate-300">
+            <a href="https://github.com/nearform/lyra" target="_blank" rel="noreferrer" className="hover:text-slate-300">
               <AiFillGithub className="w-5 h-5" />
             </a>
           </div>

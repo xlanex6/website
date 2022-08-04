@@ -21,21 +21,21 @@ function TeamMember(data: typeof core[0]) {
       <div className="flex mt-4">
         {
           data.social.github && (
-            <a href={data.social.github} target='_blank' className="mr-4">
+            <a href={data.social.github} target='_blank' rel="noreferrer" className="mr-4">
               <ImGithub className="h-4 w-4" />
             </a>
           )
         }
         {
           data.social.twitter && (
-            <a href={data.social.twitter} target='_blank' className="mr-4">
+            <a href={data.social.twitter} target='_blank' rel="noreferrer" className="mr-4">
               <ImTwitter className="h-4 w-4" />
             </a>
           )
         }
         {
           data.social.linkedin && (
-            <a href={data.social.linkedin} target='_blank' className="mr-4">
+            <a href={data.social.linkedin} target='_blank' rel="noreferrer" className="mr-4">
               <ImLinkedin2 className="h-4 w-4" />
             </a>
           )
@@ -51,7 +51,7 @@ export default function Contribute() {
       <Container className="flex flex-col justify-center h-[400px] pt-10">
         <h1 className="text-4xl font-black"> Contribute to Lyra </h1>
         <p> Lyra is open-source and licensed under the Apache 2.0 License. </p>
-        <p> Make sure to follow the <a href='https://github.com/nearform/lyra/blob/main/CONTRIBUTING.md' target='_blank' className='text-blue-400 hover:underline'>contributing guidelines</a>. </p>
+        <p> Make sure to follow the <a href='https://github.com/nearform/lyra/blob/main/CONTRIBUTING.md' target='_blank' rel="noreferrer" className='text-blue-400 hover:underline'>contributing guidelines</a>. </p>
       </Container>
 
       <Container size="full" className="bg-violet-700 py-20">
