@@ -70,7 +70,7 @@ const Home: NextPage = () => {
               It was named after the Lyra constellation due to its distributed and highly scalable nature.
             </p>
 
-            <div className='flex flex-col items-end justify-end hidden md:block'>
+            <div className='flex-col items-end justify-end hidden md:flex'>
               <div className='relative w-96 h-full shadow-lg shadow-violet-900'>
                 <Image
                   src='/imgs/dall-e/dall-e-lyra.png'
