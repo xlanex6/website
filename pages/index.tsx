@@ -89,7 +89,7 @@ const Home: NextPage = () => {
           </div>
         </Container>
 
-        <Container size='lg' className='border-t-2 border-slate-200 py-20'>
+        <Container size='lg' className='border-t-2 border-violet-500 py-20'>
           <h2 className='font-bold text-3xl'> Quickstart </h2>
 
           <div>
