@@ -19,12 +19,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Container size='full' className='bg-[#150232]'>
-        <Container size='lg' className='flex w-full justify-center items-center py-10 h-[700px]'>
-          <div className='grid gap-10 grid-cols-2'>
+        <Container size='lg' className='flex w-full justify-center items-center py-10 h-screen md:h-[700px]'>
+          <div className='grid gap-10 grid-cols-1 md:grid-cols-2'>
 
             <div className='w-full h-full flex items-center'>
               <div>
-                <h1 className='text-6xl font-black'> Lyra </h1>
+                <h1 className='text-4xl md:text-6xl font-black'> Lyra </h1>
                 <h2 className='text-xl mt-6'> Fast, typo-tolerant, full-text search engine written in TypeScript. </h2>
 
                 <div className='flex mt-6'>
@@ -38,7 +38,7 @@ const Home: NextPage = () => {
 
             <div className='w-full flex justify-center'>
               <div className='relative'>
-                <img src='/imgs/demo/preview-light.svg' alt='An example usage of Lyra' className='h-96 shadow-lg  shadow-violet-900' />
+                <img src='/imgs/demo/preview-light.svg' alt='An example usage of Lyra' className='h-full md:h-96 shadow-lg  shadow-violet-900' />
               </div>
             </div>
 
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
         <Container size='lg' className='py-20'>
           <h2 className='font-bold text-3xl'> Why? </h2>
 
-          <div className='grid grid-cols-2 gap-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
             <p className='mt-6'>
               Lyra is a modern, dependency-free full-text search engine written in TypeScript. <br />
               It has been built with speed in mind and completes most search lookups in a few microseconds. <br /><br />
@@ -70,7 +70,7 @@ const Home: NextPage = () => {
               It was named after the Lyra constellation due to its distributed and highly scalable nature.
             </p>
 
-            <div className='flex flex-col items-end justify-end'>
+            <div className='flex flex-col items-end justify-end hidden md:block'>
               <div className='relative w-96 h-full shadow-lg shadow-violet-900'>
                 <Image
                   src='/imgs/dall-e/dall-e-lyra.png'
@@ -170,6 +170,12 @@ const searchResult = search(db, {
 `}
               </code>
             </pre>
+          </div>
+
+          <div className='text-center mt-20'>
+            <a href='https://nearform.github.io/lyra/' className='text-violet-100 bg-violet-900 hover:bg-violet-800 px-6 py-3 font-bold text-xl rounded-md'>
+              Read the full docs
+            </a>
           </div>
         </Container>
       </Container>
