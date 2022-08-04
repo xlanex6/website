@@ -6,7 +6,7 @@ import hljs from 'highlight.js';
 import { Container } from '../components/Container'
 
 import javascript from 'highlight.js/lib/languages/javascript';
-import 'highlight.js/styles/a11y-light.css'
+import 'highlight.js/styles/atom-one-dark.css'
 
 const Home: NextPage = () => {
 
@@ -54,66 +54,67 @@ const Home: NextPage = () => {
         </Container>
       </Container>
 
-      <Container size='lg' className='py-20 text-slate-800'>
-        <h2 className='font-bold text-3xl'> Why? </h2>
+      <Container size='full' className='bg-violet-700 text-slate-100'>
+        <Container size='lg' className='py-20'>
+          <h2 className='font-bold text-3xl'> Why? </h2>
 
-        <div className='grid grid-cols-2 gap-10'>
-          <p className='mt-6'>
-            Lyra is a modern, dependency-free full-text search engine written in TypeScript. <br />
-            It has been built with speed in mind and completes most search lookups in a few microseconds. <br /><br />
+          <div className='grid grid-cols-2 gap-10'>
+            <p className='mt-6'>
+              Lyra is a modern, dependency-free full-text search engine written in TypeScript. <br />
+              It has been built with speed in mind and completes most search lookups in a few microseconds. <br /><br />
 
-            It implements a very fast, vanilla prefix tree to perform efficient lookups and easy serialization with multiple formats, such as dpack and protocol buffers. <br /><br />
+              It implements a very fast, vanilla prefix tree to perform efficient lookups and easy serialization with multiple formats, such as dpack and protocol buffers. <br /><br />
 
-            Its main focus is to be able to run on edge networks, such as <b>AWS Lambda@Edge</b>, <b>Cloudflare Workers</b>, and <b>Netlify Functions</b>, so expect some updates on that. <br /><br />
+              Its main focus is to be able to run on edge networks, such as <b>AWS Lambda@Edge</b>, <b>Cloudflare Workers</b>, and <b>Netlify Functions</b>, so expect some updates on that. <br /><br />
 
-            It was named after the Lyra constellation due to its distributed and highly scalable nature.
-          </p>
-
-          <div className='flex flex-col items-end justify-end'>
-            <div className='relative w-96 h-full shadow-lg shadow-gray-300'>
-              <Image
-                src='/imgs/dall-e/dall-e-lyra.png'
-                layout='fill'
-                objectFit='cover'
-                objectPosition='center'
-                alt='Lyra designed by DALL-E'
-                className=''
-              />
-            </div>
-            <p className='w-96 text-center mt-4 text-slate-600'>
-              Lyra imagined by DALL-E
+              It was named after the Lyra constellation due to its distributed and highly scalable nature.
             </p>
+
+            <div className='flex flex-col items-end justify-end'>
+              <div className='relative w-96 h-full shadow-lg shadow-violet-900'>
+                <Image
+                  src='/imgs/dall-e/dall-e-lyra.png'
+                  layout='fill'
+                  objectFit='cover'
+                  objectPosition='center'
+                  alt='Lyra designed by DALL-E'
+                  className=''
+                />
+              </div>
+              <p className='w-96 text-center mt-4 text-violet-200'>
+                Lyra imagined by DALL-E
+              </p>
+            </div>
+
           </div>
+        </Container>
 
-        </div>
-      </Container>
+        <Container size='lg' className='border-t-2 border-slate-200 py-20'>
+          <h2 className='font-bold text-3xl'> Quickstart </h2>
 
-      <Container size='lg' className='border-t-2 border-slate-200 py-20 text-slate-800'>
-        <h2 className='font-bold text-3xl'> Quickstart </h2>
+          <div>
+            <h3 className='font-bold text-2xl my-10'> Install Lyra </h3>
+            <pre>
+              <code className='bash rounded-lg'>yarn add @nearform/lyra</code>
+            </pre>
 
-        <div>
-          <h3 className='font-bold text-2xl my-10'> Install Lyra </h3>
-          <pre>
-            <code>yarn add @nearform/lyra</code>
-          </pre>
-
-          <h3 className='font-bold text-2xl my-10'> Create a new database </h3>
-          <pre>
-            <code className="js">
-              {`import { create } from '@nearform/lyra'
+            <h3 className='font-bold text-2xl my-10'> Create a new database </h3>
+            <pre>
+              <code className="js rounded-lg">
+                {`import { create } from '@nearform/lyra'
 const db = create({
   schema: {
     quote: 'string',
     author: 'string'
   }
 })`}
-            </code>
-          </pre>
+              </code>
+            </pre>
 
-          <h3 className='font-bold text-2xl my-10'> Insert data </h3>
-          <pre>
-            <code className="js">
-              {`import { create, insert } from '@nearform/lyra'
+            <h3 className='font-bold text-2xl my-10'> Insert data </h3>
+            <pre>
+              <code className="js rounded-lg">
+                {`import { create, insert } from '@nearform/lyra'
 
 insert(db, {
   quote: 'It is during our darkest moments that we must focus to see the light.',
@@ -135,13 +136,13 @@ insert(db, {
   author: 'Wayne Gretzky - Michael Scott'
 });
 `}
-            </code>
-          </pre>
+              </code>
+            </pre>
 
-          <h3 className='font-bold text-2xl my-10'> Search for data </h3>
-          <pre>
-            <code className="js">
-              {`import { create, insert, search } from '@nearform/lyra'
+            <h3 className='font-bold text-2xl my-10'> Search for data </h3>
+            <pre>
+              <code className="js rounded-lg">
+                {`import { create, insert, search } from '@nearform/lyra'
 
 const searchResult = search(db, {
   term: 'if',
@@ -167,9 +168,10 @@ const searchResult = search(db, {
   count: 2
 }
 `}
-            </code>
-          </pre>
-        </div>
+              </code>
+            </pre>
+          </div>
+        </Container>
       </Container>
     </>
   )

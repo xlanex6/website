@@ -5,11 +5,8 @@ import { Container } from "../Container";
 const pages = [
   {
     name: "Docs",
-    href: "/docs",
-  },
-  {
-    name: "Ecosystem",
-    href: "/ecosystem",
+    href: "https://nearform.github.io/lyra",
+    external: true
   },
   {
     name: "Benchmarks",
