@@ -9,6 +9,10 @@ const pages = [
     external: true
   },
   {
+    name: "Live demo",
+    href: "/demo",
+  },
+  {
     name: "Benchmarks",
     href: "/benchmarks",
   },
