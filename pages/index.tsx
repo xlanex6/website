@@ -37,8 +37,15 @@ const Home: NextPage = () => {
             </div>
 
             <div className='w-full flex justify-center'>
-              <div className='relative'>
-                <img src='/imgs/demo/preview-light.svg' alt='An example usage of Lyra' className='h-full md:h-96 shadow-lg  shadow-violet-900' />
+              <div className='relative h-full w-full'>
+                <Image
+                  src='/imgs/demo/preview-light.png'
+                  alt='An example usage of Lyra'
+                  layout='responsive'
+                  width={'100%'}
+                  height={'76%'}
+                  className='shadow-lg shadow-violet-900'
+                />
               </div>
             </div>
 
