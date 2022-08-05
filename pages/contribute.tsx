@@ -48,14 +48,14 @@ function TeamMember(data: typeof core[0]) {
 export default function Contribute() {
   return (
     <Container size="full" className="bg-violet-900">
-      <Container className="flex flex-col justify-center h-[400px] pt-10">
+      <Container size="lg" className="flex flex-col justify-center h-[400px] pt-10">
         <h1 className="text-4xl font-black"> Contribute to Lyra </h1>
         <p> Lyra is open-source and licensed under the Apache 2.0 License. </p>
         <p> Make sure to follow the <a href='https://github.com/nearform/lyra/blob/main/CONTRIBUTING.md' target='_blank' rel="noreferrer" className='text-blue-400 hover:underline'>contributing guidelines</a>. </p>
       </Container>
 
       <Container size="full" className="bg-violet-700 py-20">
-        <Container>
+        <Container size="lg">
 
           <h1 className="text-4xl font-black mb-16"> Core team </h1>
 

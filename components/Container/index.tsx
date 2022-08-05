@@ -11,8 +11,8 @@ export const Container: FC<ContainerProps> = ({ children, size = 'xl', className
   <div className={
     clx('m-auto', className, {
       'w-full': size === 'full',
-      'w-5/6': size === 'xl',
-      'w-4/6': size === 'lg',
+      'w-11/12': size === 'xl',
+      'w-9/12': size === 'lg',
       'w-3/6': size === 'md',
       'w-2/6': size === 'sm',
     })

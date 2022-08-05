@@ -18,7 +18,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <Container size='full' className='bg-[#150232]'>
+      <Container size='full' className='bg-gradient-to-b from-[#150232] to-[#0a0019]'>
         <Container size='lg' className='flex w-full justify-center items-center py-10 h-screen md:h-[700px]'>
           <div className='grid gap-10 grid-cols-1 md:grid-cols-2'>
 
@@ -65,7 +65,7 @@ const Home: NextPage = () => {
         <Container size='lg' className='py-20'>
           <h2 className='font-bold text-3xl'> Why? </h2>
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
+          <div className='grid grid-cols-1 md:grid-cols-[60%_1fr] gap-10'>
             <p className='mt-6'>
               Lyra is a modern, dependency-free full-text search engine written in TypeScript. <br />
               It has been built with speed in mind and completes most search lookups in a few microseconds. <br /><br />
