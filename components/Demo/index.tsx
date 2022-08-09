@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { create, formatNanoseconds, insert, search } from "@nearform/lyra";
 import dataset from "./events";
+import styles from "./demo.module.css";
 
 interface Hit {
   description: string;
@@ -101,7 +102,7 @@ export function LyraDemo() {
   if (indexing > 0) {
     return (
       <>
-        <div className="flex justify-center text-center text-xl">
+        <div className="flex justify-center text-xl text-center">
           <div>
             <h2>
               Indexing <strong>{formatNumber(indexing)}</strong> events
@@ -123,24 +124,24 @@ export function LyraDemo() {
           value={term}
           onChange={e => setTerm(e.target.value)}
           placeholder="Type a search term here..."
-          className="w-full p-2 rounded-lg text-slate-900 border-2 border-violet-300"
+          className={styles.input}
         />
 
-        <div className="mt-4 grid grid-cols-4 gap-10">
+        <div className="grid grid-cols-2 gap-4 mt-4 lg:gap-10 lg:grid-cols-4">
           <div className="grid">
             <label htmlFor="exact" className="font-bold">Exact</label>
-            <select id="exact" value={exact.toString()} onChange={() => setExact(exact => !exact)} className='rounded-md p-2 text-slate-900 border-2 border-violet-300'>
+            <select id="exact" value={exact.toString()} onChange={() => setExact(exact => !exact)} className={styles.select}>
               <option value={"false"}>No</option>
               <option value={"true"}>Yes</option>
             </select>
           </div>
           <div className="grid">
             <label htmlFor="limit" className="font-bold">Limit</label>
-            <input id="limit" type="number" value={limit} onChange={e => setLimit(parseInt(e.target.value))} className='rounded-md p-2 text-slate-900 border-2 border-violet-300' />
+            <input id="limit" type="number" value={limit} onChange={e => setLimit(parseInt(e.target.value))} className={styles.input} />
           </div>
           <div className="grid">
             <label htmlFor="offset" className="font-bold">Offset</label>
-            <input id="offset" type="number" value={offset} onChange={e => setOffset(parseInt(e.target.value))} className='rounded-md p-2 text-slate-900 border-2 border-violet-300' />
+            <input id="offset" type="number" value={offset} onChange={e => setOffset(parseInt(e.target.value))} className={styles.input} />
           </div>
           <div className="grid">
             <label htmlFor="tolerance" className="font-bold">Typo tolerance</label>
@@ -151,7 +152,7 @@ export function LyraDemo() {
               max={3}
               min={0}
               onChange={e => setTolerance(parseInt(e.target.value))}
-              className='rounded-md p-2 text-slate-900 border-2 border-violet-300'
+              className={styles.input}
             />
           </div>
         </div>
@@ -164,7 +165,7 @@ export function LyraDemo() {
 
             <div>
               {results.hits.map((result, i) => (
-                <p key={i + result.description} className='flex flex-col mb-4 bg-violet-500 rounded-lg p-4'>
+                <p key={i + result.description} className='flex flex-col p-4 mb-4 rounded-lg bg-violet-500'>
                   <span className="w-full">
                     Year: <strong>{formatYear(result.date)}</strong>
                   </span>
