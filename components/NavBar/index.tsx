@@ -10,7 +10,7 @@ import { MenuIcon } from "../Icons";
 const pages = [
   {
     name: "Docs",
-    href: "https://nearform.github.io/lyra",
+    href: "https://docs.lyrajs.io",
     external: true,
   },
   {
